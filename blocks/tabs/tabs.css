@@ -1,4 +1,4 @@
-
+/* Base tabs list */
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -40,7 +40,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -58,18 +57,31 @@
   display: none;
 }
 
-/* Merged .tabs.tabs2 selector */
+/* --- .tabs.tabs2 styles (merged/ordered to avoid duplicates & specificity issues) --- */
 .tabs.tabs2 .tabs-list {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 56px;
-  padding: 8px 24px;
+  width: 100%;
+  min-height: 60px;
+  height: 60px;
   background: #fff;
-  border: none;
-  min-height: 40px;
+  padding: 0 56px;
   box-sizing: border-box;
+  overflow-x: auto;
+  gap: 40px;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .tabs.tabs2 .tabs-list {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 44px;
+    height: 44px;
+    gap: 18px;
+  }
 }
 
 /* Tab buttons: flat style and brand font */
@@ -79,91 +91,88 @@
   box-shadow: none;
   border-radius: 0;
   margin: 0;
-  padding: 0;
-  color: #00005B;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 600;
+  color: #00005b;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: 24px;
+  height: 60px;
   transition: none;
+  min-width: 0;
+  white-space: nowrap;
+  padding: 0;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs2 .tabs-list button {
+    height: 44px;
+    font-size: 15px;
+  }
 }
 
 .tabs.tabs2 .tabs-list button[aria-selected='true'] {
-  border: none;
   background: none;
+  border: none;
   cursor: default;
+  color: #00005b;
+}
+
+/* Ensure main nav group is visually centered, Search isolated right */
+.tabs.tabs2 .tabs-list button#tab-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-right: 0;
+}
+
+@media (width <= 900px) {
+  .tabs.tabs2 .tabs-list button#tab-search {
+    height: 44px;
+  }
 }
 
 .tabs.tabs2 .tabs-list button p {
   margin: 0;
   padding: 0;
   font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 18px;
+  font-weight: 700;
   color: inherit;
-  line-height: inherit;
+  line-height: 1;
   display: flex;
   align-items: center;
-  height: 24px;
+  height: 60px;
+  white-space: nowrap;
 }
 
-/* Remove any separators or previous pseudo-elements */
+@media (width <= 900px) {
+  .tabs.tabs2 .tabs-list button p {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
 .tabs.tabs2 .tabs-list button::before,
 .tabs.tabs2 .tabs-list button::after {
   display: none;
 }
 
-/* Push Search tab to the far right */
-.tabs.tabs2 .tabs-list button#tab-search {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  padding-right: 0;
-}
-
-/* Visual icon for Search, perfectly centered and with clear gap */
+/* Search icon */
 .tabs.tabs2 .tabs-list button#tab-search p {
-  position: relative;
-  padding-left: 32px;
+  padding-left: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 24 24' fill='none' stroke='%2300005B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 19px 19px;
+  background-position: left center;
 }
 
-.tabs.tabs2 .tabs-list button#tab-search p::after {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 18px;
-  height: 18px;
-  transform: translateY(-50%);
-  display: block;
-  background: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%2300005B' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") center/contain no-repeat;
-  pointer-events: none;
-}
-
-/* Responsive adjustments */
 @media (width <= 900px) {
-  .tabs.tabs2 .tabs-list {
-    gap: 24px;
-    padding: 5px 10px;
-    min-height: 28px;
-  }
-
-  .tabs.tabs2 .tabs-list button,
-  .tabs.tabs2 .tabs-list button p {
-    font-size: 14px;
-    line-height: 18px;
-    height: 18px;
-  }
-
   .tabs.tabs2 .tabs-list button#tab-search p {
+    background-size: 15px 15px;
     padding-left: 20px;
-  }
-
-  .tabs.tabs2 .tabs-list button#tab-search p::after {
-    width: 13px;
-    height: 13px;
   }
 }
