@@ -42,11 +42,11 @@
       ]
     },
     {
-      "name": "Embed (video)",
+      "name": "Tabs",
       "cluster": 2,
-      "source": "Embed",
-      "target": "Embed",
-      "key": "embedVideo2",
+      "source": "Tabs",
+      "target": "Tabs",
+      "key": "tabs2",
       "instances": [
         {
           "url": "https://www.nrma.com.au/business-insurance",
@@ -87,11 +87,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Hero",
       "cluster": 5,
-      "source": "Columns",
-      "target": "Columns (columns5)",
-      "key": "columns5",
+      "source": "Hero",
+      "target": "Hero (hero5)",
+      "key": "hero5",
       "instances": [
         {
           "url": "https://www.nrma.com.au/business-insurance",
@@ -222,11 +222,11 @@
       ]
     },
     {
-      "name": "Table (striped & bordered)",
+      "name": "Columns",
       "cluster": 14,
-      "source": "Table (striped, bordered)",
-      "target": "Table (striped, bordered, tableStripedBordered14)",
-      "key": "tableStripedBordered14",
+      "source": "Columns",
+      "target": "Columns (columns14)",
+      "key": "columns14",
       "instances": [
         {
           "url": "https://www.nrma.com.au/business-insurance",
@@ -255,7 +255,7 @@
       "name": "Table (striped & bordered)",
       "cluster": 16,
       "source": "Table (striped, bordered)",
-      "target": "Table (striped, bordered, tableStripedBordered16)",
+      "target": "Table (striped, bordered)",
       "key": "tableStripedBordered16",
       "instances": [
         {
