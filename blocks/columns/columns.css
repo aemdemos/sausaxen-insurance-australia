@@ -1,4 +1,4 @@
-/* Order fixed for no-descending-specificity: Place .columns.columns14 > div and .columns.columns14 > div > div before .columns.columns9 > div and .columns.columns9 > div > div:first-child */
+/* Order fixed for no-descending-specificity: Place .columns.columns14 > div and .columns.columns14 > div > div before .columns.columns15 > div, .columns.columns9 > div, and .columns.columns9 > div > div */
 
 .columns-wrapper {
   background: #060e63;
@@ -89,7 +89,7 @@
   display: block;
 }
 
-/* --- columns14 block must come before columns9 for specificity order --- */
+/* --- columns14 block must come before columns9 and columns15 for specificity order --- */
 .columns.columns14 {
   background: #040950;
   width: 100vw;
@@ -115,7 +115,213 @@
   display: block;
   box-shadow: none;
 }
+
 /* --- END columns14 block --- */
+
+.columns.columns15 {
+  background: #020857;
+  padding: 56px 0 48px;
+  width: 100vw;
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.columns.columns15 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 370px;
+  position: relative;
+}
+
+/* All columns */
+.columns.columns15 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1 1 0;
+  min-width: 170px;
+}
+
+/* Last column: top and left aligned, normal flow */
+.columns.columns15 > div > div:last-child {
+  min-width: 240px;
+  max-width: 300px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+/* Headings */
+.columns.columns15 h3 {
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1.17rem;
+  font-weight: 700;
+  margin: 0 0 18px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: normal;
+}
+
+/* Navigation links: underlined, white, regular weight, left-aligned */
+.columns.columns15 > div > div:not(:last-child) .button {
+  background: none;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 12px;
+  text-align: left;
+  text-decoration: underline;
+  display: inline;
+  min-width: 0;
+  width: auto;
+  cursor: pointer;
+  line-height: 1.8;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.columns.columns15 > div > div:last-child .button {
+  min-width: 220px;
+}
+
+.columns.columns15 > div > div:not(:last-child) .button:hover,
+.columns.columns15 > div > div:not(:last-child) .button:focus {
+  color: #e3e8ff;
+  text-decoration: underline;
+  background: none;
+}
+
+.columns.columns15 > div > div:not(:last-child) .button-container {
+  margin: 0 0 8px;
+  display: block;
+  width: auto;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Last column: left align everything, tighter button spacing */
+.columns.columns15 > div > div:last-child .button-container {
+  display: block;
+  text-align: left;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.columns.columns15 > div > div:last-child .button-container:first-child {
+  margin-bottom: 18px;
+}
+
+/* "Log in" outlined button */
+.columns.columns15 > div > div:last-child .button-container:first-child .button {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 32px;
+  padding: 12px 48px;
+  font-weight: 600;
+  font-size: 1.09rem;
+  text-decoration: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+/* "Contact us" filled button */
+.columns.columns15 > div > div:last-child .button-container:nth-child(2) .button {
+  display: inline-block;
+  background: #fff;
+  color: #020857;
+  border: none;
+  border-radius: 32px;
+  padding: 18px 48px;
+  font-weight: 700;
+  font-size: 1.09rem;
+  text-decoration: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+/* Strong text labels in last column, left aligned */
+.columns.columns15 > div > div:last-child p strong {
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.columns.columns15 > div > div:last-child p {
+  color: #fff;
+  font-size: 1rem;
+  font-family: Inter, Arial, sans-serif;
+  margin: 0 0 12px;
+  font-weight: 400;
+  text-align: left;
+  max-width: 260px;
+  align-self: flex-start;
+}
+
+/* App badges and images: more vertical space, left aligned */
+.columns.columns15 > div > div:last-child picture,
+.columns.columns15 > div > div:last-child img {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 24px;
+  max-width: 140px;
+  height: auto;
+}
+
+/* Responsive adjustments: stack columns vertically at small screens */
+@media (width <= 900px) {
+  .columns.columns15 > div {
+    flex-direction: column;
+    gap: 36px;
+    max-width: 100%;
+    padding: 0 1rem;
+    align-items: stretch;
+  }
+
+  .columns.columns15 > div > div {
+    min-width: 0;
+    width: 100%;
+    padding: 0 0.5rem;
+    align-items: flex-start;
+  }
+
+  .columns.columns15 > div > div:last-child {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .columns.columns15 {
+    padding: 24px 0 16px;
+  }
+}
 
 .columns.columns9 {
   background: #f7f1ec;
