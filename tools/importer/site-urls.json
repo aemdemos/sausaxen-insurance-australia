@@ -1,0 +1,17 @@
+{
+  "originUrl": "https://www.nrma.com.au",
+  "urls": [
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "source": "MANUAL",
+      "targetPath": "/business-insurance",
+      "id": "314a03f9f44ee3b314ab5c0728ea72c2af83351a"
+    }
+  ],
+  "crawlOptions": {
+    "strategy": "manual",
+    "strategiesAttempted": [
+      "MANUAL"
+    ]
+  }
+}
