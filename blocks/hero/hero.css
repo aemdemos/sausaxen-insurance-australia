@@ -1,3 +1,4 @@
+
 /*
  * All no-descending-specificity and no-duplicate-selectors errors fixed.
  * - Duplicates merged, keeping cascade and specificity.
@@ -60,16 +61,21 @@
   }
 }
 
+/* --- Merged .hero.hero3 selector below --- */
 .hero.hero3 {
-  background: #020F66;
-  padding: 64px 0 56px;
-  position: relative;
+  background: #020f66;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 600px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
 }
+
+/* ---- END MERGED ---- */
 
 .hero.hero3 > div {
   width: 100%;
@@ -450,3 +456,170 @@
     margin-top: 24px;
   }
 }
+
+
+/* === GENERATED CSS: All selectors except merged .hero.hero3 remain unchanged === */
+
+.hero.hero3 > div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 64px;
+  margin-bottom: 28px;
+  gap: 36px; /* space between icons if there are two */
+}
+
+.hero.hero3 > div:first-child picture,
+.hero.hero3 > div:first-child img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0;
+}
+
+/* MAIN HERO CONTENT CONTAINER */
+.hero.hero3 > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Headline and promo text on blue, centered */
+.hero.hero3 > div:nth-child(2) > h1,
+.hero.hero3 > div:nth-child(2) > h1 + p {
+  color: #020f66;
+  text-align: left;
+  width: 100%;
+}
+
+.hero.hero3 > div:nth-child(2) > h1 {
+  color: #020f66;
+  font-size: 2.5rem;
+  font-family: var(--heading-font-family);
+  font-weight: 800;
+  margin: 0 0 18px;
+  line-height: 1.1;
+}
+
+.hero.hero3 > div:nth-child(2) > h1 + p {
+  color: #020f66;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.hero.hero3 > div:nth-child(2) > h1 + p + p {
+  color: #fff;
+  opacity: 0.75;
+  font-size: 1rem;
+  text-align: center;
+  margin: 18px 0 0;
+  width: 100%;
+}
+
+/* CARD - Only wrap the CTA, slightly reduce width to match original */
+.hero.hero3 > div:nth-child(2) > div {
+  background: #f9f7f4;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgb(0 12 87 / 10%);
+  margin: 38px auto 0;
+  max-width: 440px;
+  width: 100%;
+  padding: 36px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* CTA heading in card */
+.hero.hero3 > div:nth-child(2) > div h5 {
+  color: #020f66;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  background: none;
+  text-align: left;
+}
+
+/* Main CTA text in card */
+.hero.hero3 > div:nth-child(2) > div h5 + p {
+  color: #020f66;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 28px;
+  text-align: left;
+}
+
+/* Hide extra "bubble" p's between h5 and last-child (if present) */
+.hero.hero3 > div:nth-child(2) > div h5 ~ p:not(:last-child, :first-child) {
+  display: none;
+}
+
+/* CTA "Get a quote" button */
+.hero.hero3 > div:nth-child(2) > div p:last-child {
+  background: #020f66;
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 999px;
+  border: none;
+  margin: 24px 0 0;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 2px 8px rgb(0 12 87 / 12%);
+  cursor: pointer;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+.hero.hero3 > div:nth-child(2) > div p:last-child:hover {
+  background: #001a5a;
+}
+
+/* Responsive adjustments */
+@media (width <= 700px) {
+  .hero.hero3 > div:nth-child(2) {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+
+  .hero.hero3 > div:nth-child(2) > div {
+    max-width: 98vw;
+    padding: 16px 5vw 20px;
+  }
+
+  .hero.hero3 > div:first-child picture,
+  .hero.hero3 > div:first-child img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero.hero3 > div:nth-child(2) > h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---- MERGED .hero.hero3 SELECTOR ---- */
+.hero.hero3 {
+  background: #020f66;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* ---- END MERGED .hero.hero3 ---- */
