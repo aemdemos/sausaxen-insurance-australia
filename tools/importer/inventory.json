@@ -1,0 +1,350 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-00-607d0d7bac43a72e8200635a94a25470b3534a79",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-28-17a2d8b7c2f0e41c65062dbbc04730508e0eb617",
+          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "name": "header",
+      "cluster": 1,
+      "source": "Header",
+      "target": "Header",
+      "key": "header1",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-00-607d0d7bac43a72e8200635a94a25470b3534a79",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Embed (video)",
+      "cluster": 2,
+      "source": "Embed",
+      "target": "Embed",
+      "key": "embedVideo2",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-01-3a5347fd65dc5b786363206b1a1e40fd2ff2d486",
+          "xpath": "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 3,
+      "source": "Hero",
+      "target": "Hero (hero3)",
+      "key": "hero3",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-02-f544ad3690ed599879cabd93fbe05cd8c0e50c6d",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 4,
+      "source": "Cards",
+      "target": "Cards (cards4)",
+      "key": "cards4",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-04-561b87121abf245886c3eb0149b09bd91d0b6cd6",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 5,
+      "source": "Columns",
+      "target": "Columns (columns5)",
+      "key": "columns5",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-06-fa6bf7253ae5ac3b2ede518817f6f68ad2b7bdfd",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "cluster": 6,
+      "source": "Hero",
+      "target": "Hero (hero6)",
+      "key": "hero6",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-07-271ae76e4d360300beb4f92c2c0d337859eb8a2d",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 7,
+      "source": "Cards",
+      "target": "Cards (cards7)",
+      "key": "cards7",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-09-8a81f3933f9f6be75b3cb3a75c68e88c10265646",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 8,
+      "source": "Columns",
+      "target": "Columns (columns8)",
+      "key": "columns8",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-11-ff9b048be457f1cb6b623d156f148ff651e76d57",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 9,
+      "source": "Columns",
+      "target": "Columns (columns9)",
+      "key": "columns9",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-12-8ad56eef8a95b89e14d82556c74135a1202441f8",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 10,
+      "source": "Cards",
+      "target": "Cards (cards10)",
+      "key": "cards10",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-14-ac5ed18a24d699189c39d7a6cfb2be0c20413663",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 11,
+      "source": "Accordion",
+      "target": "Accordion",
+      "key": "accordion11",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-15-5c1ff75b82fd4763d2b534a97fdca3ad2642b2bd",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[7]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 12,
+      "source": "Cards",
+      "target": "Cards (cards12)",
+      "key": "cards12",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-17-7355ce9e9383499ed56ffe8ac1e55950127332f4",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 13,
+      "source": "Cards",
+      "target": "Cards (cards13)",
+      "key": "cards13",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-19-61be99933821f995b8a40fafef80769425fd1794",
+          "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Table (striped & bordered)",
+      "cluster": 14,
+      "source": "Table (striped, bordered)",
+      "target": "Table (striped, bordered, tableStripedBordered14)",
+      "key": "tableStripedBordered14",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-21-dae946640ab96eb6f208b5f80e2ba558cb8369c1",
+          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 15,
+      "source": "Columns",
+      "target": "Columns (columns15)",
+      "key": "columns15",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-24-fee9d01b2f66a50eb5138d5cb917043fc14fe1f0",
+          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Table (striped & bordered)",
+      "cluster": 16,
+      "source": "Table (striped, bordered)",
+      "target": "Table (striped, bordered, tableStripedBordered16)",
+      "key": "tableStripedBordered16",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-23-9106dfac9628ba98410b5e904ea3f16afd7a499f",
+          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"
+        },
+        {
+          "url": "https://www.nrma.com.au/business-insurance",
+          "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+          "uuid": "314a03f9-25-6ec447c9f52a95650a0e8e17efd22932ed9f1b97",
+          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-03-36b9734311ec4ee35b4b5ce1fa0b95f2540c49ad",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-05-e7d1d9501d00017b48bd707a2a9b8006f3d9314a",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-08-76c004ce4ff642264bb6cff9c7cc21a3017e3204",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-10-51ea5ed1b6d0bd91b5031b4bfe47bdd9c14ad75a",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-13-4890aef8953b973a39d84e20e85e333bc6f38d8c",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-16-7d81f46111b2855effcc28ed03a4903f1de97fbc",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-18-aba776b289e6f5c47e0f252b9f6f5251a975cd4a",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-20-87a43a9f679ea11db546559770d63c57fd9cfa45",
+      "xpath": "/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[3]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-22-2071f2258ce6381e5301749d8a0af66adbffa99b",
+      "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-26-981fb9e119a562a22343c71f823c0e0aeed57598",
+      "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[6]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-27-d23df01e31629b4bd0e718450c7dbe7851582335",
+      "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[7]"
+    },
+    {
+      "url": "https://www.nrma.com.au/business-insurance",
+      "urlHash": "314a03f9f44ee3b314ab5c0728ea72c2af83351a",
+      "uuid": "314a03f9-28-17a2d8b7c2f0e41c65062dbbc04730508e0eb617",
+      "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[2]"
+    }
+  ]
+}
