@@ -25,3 +25,153 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards.cards4 {
+  background: #9ac8b2;
+  padding: 48px 0;
+}
+
+/* Flex row layout for the card grid */
+.cards.cards4 > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Card: fixed width, rounded, spaced, full height flex column layout */
+.cards.cards4 > ul > li {
+  background: #fff;
+  border-radius: 32px;
+  border: none;
+  box-shadow: none;
+  width: 356px;
+  min-width: 320px;
+  max-width: 370px;
+  padding: 40px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  box-sizing: border-box;
+}
+
+/* Card content: vertical stack, push CTA row to bottom */
+.cards.cards4 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+/* Headings: navy, underline, margin */
+.cards.cards4 .cards-card-body h3 {
+  color: #00115a;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.cards.cards4 .cards-card-body h3 a {
+  color: #00115a;
+  text-decoration: underline;
+}
+
+.cards.cards4 .cards-card-body p:not(.button-container) {
+  color: #00115a;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+/* Remove margin from all button containers for tight row */
+.cards.cards4 .cards-card-body p.button-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrap the last two .button-container p's in a flex row using :nth-last-child and sibling selector */
+.cards.cards4 .cards-card-body p.button-container:nth-last-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  margin-top: auto;
+}
+
+/* Remove default spacing from "Learn more" paragraph so both CTAs sit on a single row */
+.cards.cards4 .cards-card-body p.button-container:last-child {
+  margin-left: 0;
+}
+
+/* "Get a quote" button */
+.cards.cards4 .cards-card-body p.button-container:nth-last-child(2) a.button {
+  background: #00115a;
+  color: #fff;
+  border-radius: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 32px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+  line-height: 1.4;
+  min-width: 0;
+  min-height: 0;
+  margin-right: 0;
+}
+
+/* "Learn more" link: plain text link, navy, underlined, regular weight */
+.cards.cards4 .cards-card-body p.button-container:last-child a.button {
+  background: none;
+  color: #00115a;
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-left: 0;
+  min-width: 0;
+  min-height: 0;
+  display: inline-block;
+  line-height: 1.4;
+  border: none;
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (width <= 1024px) {
+  .cards.cards4 > ul {
+    gap: 24px;
+  }
+
+  .cards.cards4 > ul > li {
+    min-width: 240px;
+    max-width: 100%;
+    width: 45%;
+  }
+}
+
+@media (width <= 700px) {
+  .cards.cards4 > ul {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .cards.cards4 > ul > li {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
