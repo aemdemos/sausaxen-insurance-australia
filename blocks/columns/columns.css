@@ -1,14 +1,77 @@
-.columns > div {
-  display: flex;
-  flex-direction: column;
+.columns-wrapper {
+  background: #060e63;
+  padding: 4.5rem 0;
 }
 
-.columns img {
+.columns > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6vw;
+  max-width: 1150px;
+  margin: 0 auto;
   width: 100%;
 }
 
+.columns picture,
+.columns img {
+  display: none;
+}
+
 .columns > div > div {
-  order: 1;
+  flex: 1 1 0;
+  max-width: 430px;
+  min-width: 220px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.columns > div > div > h3 {
+  color: #fff;
+  font-size: 2.13rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.13;
+  letter-spacing: 0.01em;
+}
+
+.columns > div > div > p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 0 1.15rem;
+  line-height: 1.5;
+}
+
+.columns .button-container {
+  margin-top: 1.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.columns .button-container .button {
+  background: #fff;
+  color: #060e63;
+  font-weight: 700;
+  border-radius: 2.4em;
+  padding: 0.7em 2.1em;
+  border: none;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  margin: 0 auto;
+}
+
+.columns .button-container .button:hover,
+.columns .button-container .button:focus {
+  background: #e3e8ff;
+  color: #060e63;
+  text-decoration: underline;
 }
 
 .columns > div > .columns-img-col {
@@ -29,5 +92,24 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+@media (width <= 900px) {
+  .columns > div {
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .columns > div > div {
+    max-width: 100%;
+    min-width: unset;
+    padding: 0 0.5rem;
+  }
+
+  .columns-wrapper {
+    padding: 2rem 0.25rem;
   }
 }
