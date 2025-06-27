@@ -1,3 +1,4 @@
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -55,4 +56,114 @@
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+/* Merged .tabs.tabs2 selector */
+.tabs.tabs2 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 56px;
+  padding: 8px 24px;
+  background: #fff;
+  border: none;
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+/* Tab buttons: flat style and brand font */
+.tabs.tabs2 .tabs-list button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  color: #00005B;
+  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  transition: none;
+}
+
+.tabs.tabs2 .tabs-list button[aria-selected='true'] {
+  border: none;
+  background: none;
+  cursor: default;
+}
+
+.tabs.tabs2 .tabs-list button p {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+/* Remove any separators or previous pseudo-elements */
+.tabs.tabs2 .tabs-list button::before,
+.tabs.tabs2 .tabs-list button::after {
+  display: none;
+}
+
+/* Push Search tab to the far right */
+.tabs.tabs2 .tabs-list button#tab-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+
+/* Visual icon for Search, perfectly centered and with clear gap */
+.tabs.tabs2 .tabs-list button#tab-search p {
+  position: relative;
+  padding-left: 32px;
+}
+
+.tabs.tabs2 .tabs-list button#tab-search p::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  display: block;
+  background: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%2300005B' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") center/contain no-repeat;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .tabs.tabs2 .tabs-list {
+    gap: 24px;
+    padding: 5px 10px;
+    min-height: 28px;
+  }
+
+  .tabs.tabs2 .tabs-list button,
+  .tabs.tabs2 .tabs-list button p {
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+  }
+
+  .tabs.tabs2 .tabs-list button#tab-search p {
+    padding-left: 20px;
+  }
+
+  .tabs.tabs2 .tabs-list button#tab-search p::after {
+    width: 13px;
+    height: 13px;
+  }
 }
