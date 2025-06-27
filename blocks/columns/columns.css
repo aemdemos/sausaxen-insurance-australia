@@ -1,3 +1,5 @@
+/* Order fixed for no-descending-specificity: Place .columns.columns14 > div and .columns.columns14 > div > div before .columns.columns9 > div and .columns.columns9 > div > div:first-child */
+
 .columns-wrapper {
   background: #060e63;
   padding: 4.5rem 0;
@@ -19,7 +21,6 @@
   display: none;
 }
 
-/* Moved .columns.columns9 picture, .columns.columns9 img above .columns > div > .columns-img-col img to fix no-descending-specificity */
 .columns.columns9 picture,
 .columns.columns9 img {
   display: none;
@@ -88,37 +89,33 @@
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
-
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+/* --- columns14 block must come before columns9 for specificity order --- */
+.columns.columns14 {
+  background: #040950;
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  position: relative;
 }
 
-@media (width <= 900px) {
-  .columns > div {
-    flex-direction: column;
-    gap: 2.5rem;
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .columns > div > div {
-    max-width: 100%;
-    min-width: unset;
-    padding: 0 0.5rem;
-  }
-
-  .columns-wrapper {
-    padding: 2rem 0.25rem;
-  }
+.columns.columns14 > div,
+.columns.columns14 > div > div {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  display: block;
+  box-shadow: none;
 }
+/* --- END columns14 block --- */
 
 .columns.columns9 {
   background: #f7f1ec;
@@ -237,8 +234,37 @@
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+@media (width >= 900px) {
+  .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
 @media (width <= 900px) {
+  .columns > div {
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .columns > div > div {
+    max-width: 100%;
+    min-width: unset;
+    padding: 0 0.5rem;
+  }
+
+  .columns-wrapper {
+    padding: 2rem 0.25rem;
+  }
+
   .columns.columns9 > div {
     flex-direction: column;
     gap: 28px;
