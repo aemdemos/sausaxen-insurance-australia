@@ -103,7 +103,33 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
   display: block;
 }
 
-/* --- columns14 block must come after .columns > div and .columns > div > div for specificity --- */
+/* --- columns9 moved before columns14 and columns15 for specificity --- */
+
+/* Lower specificity selectors moved before columns9 */
+
+.columns.columns14 > div {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  display: block;
+  box-shadow: none;
+}
+
+.columns.columns15 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 320px;
+}
 
 .columns.columns9 {
   background: #f8f3ef;
@@ -202,6 +228,27 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
   outline: none;
 }
 
+.columns.columns15 > div > div:not(:last-child) .button {
+  background: none;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 3px;
+  text-align: left;
+  text-decoration: underline;
+  display: inline;
+  min-width: 0;
+  width: auto;
+  cursor: pointer;
+  line-height: 1.6;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
 .columns.columns9 .button-container .button:hover,
 .columns.columns9 .button-container .button:focus {
   background: #06176f;
@@ -220,18 +267,6 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
   box-shadow: none;
   position: relative;
   display: block;
-}
-
-.columns.columns14 > div {
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  display: block;
-  box-shadow: none;
 }
 
 .columns.columns14 > div > div {
@@ -253,18 +288,6 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
   box-sizing: border-box;
   color: #fff;
   font-family: Inter, Arial, sans-serif;
-}
-
-.columns.columns15 > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  max-width: 1250px;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 320px;
 }
 
 .columns.columns15 > div > div {
@@ -295,27 +318,6 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
   margin: 0 0 10px;
   line-height: 1.18;
   text-align: left;
-}
-
-.columns.columns15 > div > div:not(:last-child) .button {
-  background: none;
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 0;
-  margin: 0 0 3px;
-  text-align: left;
-  text-decoration: underline;
-  display: inline;
-  min-width: 0;
-  width: auto;
-  cursor: pointer;
-  line-height: 1.6;
-  font-family: inherit;
-  transition: color 0.2s;
 }
 
 .columns.columns15 > div > div:not(:last-child) .button:hover,
@@ -409,6 +411,10 @@ Order fixed for no-descending-specificity: Place .columns > div and .columns > d
 .columns.columns15 > div > div:last-child p:last-child img {
   margin-bottom: 0;
 }
+
+
+
+
 
 @media (width <= 900px) {
   .columns.columns15 {
