@@ -1,5 +1,5 @@
 /*
-Order fixed for no-descending-specificity: Place .columns.columns14 > div and .columns.columns14 > div > div before .columns.columns15 > div, .columns.columns9 > div, and .columns.columns9 > div > div
+Order fixed for no-descending-specificity: Place .columns > div and .columns > div > div before .columns.columns14 > div and .columns.columns14 > div > div, etc.
 */
 
 .columns-wrapper {
@@ -103,18 +103,19 @@ Order fixed for no-descending-specificity: Place .columns.columns14 > div and .c
   display: block;
 }
 
-/* --- columns14 block must come before columns9 and columns15 for specificity order --- */
+/* --- columns14 block must come after .columns > div and .columns > div > div for specificity --- */
+
 .columns.columns14 {
-  background: #040950;
-  width: 100vw;
+  background-color: #070d4f;
+  width: 100%;
   min-height: 100vh;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: none;
   box-shadow: none;
   position: relative;
+  display: block;
 }
 
 .columns.columns14 > div {
@@ -140,7 +141,6 @@ Order fixed for no-descending-specificity: Place .columns.columns14 > div and .c
   display: block;
   box-shadow: none;
 }
-/* --- END columns14 block --- */
 
 .columns.columns9 {
   background: #f8f3ef;
@@ -246,31 +246,6 @@ Order fixed for no-descending-specificity: Place .columns.columns14 > div and .c
   text-decoration: underline;
 }
 
-.columns.columns15 > div > div:not(:last-child) .button {
-  background: none;
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 0;
-  margin: 0 0 12px;
-  text-align: left;
-  text-decoration: underline;
-  display: inline;
-  min-width: 0;
-  width: auto;
-  cursor: pointer;
-  line-height: 1.8;
-  font-family: inherit;
-  transition: color 0.2s;
-}
-
-.columns.columns15 > div > div:last-child .button {
-  min-width: 220px;
-}
-
 .columns.columns15 {
   background: #020857;
   padding: 56px 0 48px;
@@ -329,6 +304,31 @@ Order fixed for no-descending-specificity: Place .columns.columns14 > div and .c
   letter-spacing: 0;
   text-align: left;
   white-space: normal;
+}
+
+.columns.columns15 > div > div:not(:last-child) .button {
+  background: none;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 12px;
+  text-align: left;
+  text-decoration: underline;
+  display: inline;
+  min-width: 0;
+  width: auto;
+  cursor: pointer;
+  line-height: 1.8;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.columns.columns15 > div > div:last-child .button {
+  min-width: 220px;
 }
 
 .columns.columns15 > div > div:not(:last-child) .button:hover,
