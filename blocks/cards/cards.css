@@ -1,6 +1,7 @@
 
 
 
+
 /* --- CARDS GENERAL GRID --- */
 .cards > ul {
   list-style: none;
@@ -605,3 +606,10 @@
   }
 }
 
+/* --- MERGED .cards.cards13 --- */
+.cards.cards13 {
+  background: #F7F1EC;
+  padding: 56px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
