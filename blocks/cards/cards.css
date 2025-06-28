@@ -31,6 +31,201 @@
   object-fit: cover;
 }
 
+/* --- MERGED .cards.cards12 --- */
+.cards.cards12 {
+  background: #f5efea;
+  padding: 40px 0;
+}
+
+.cards.cards12 > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each card: large rounding, no border, top-aligned content, wider card */
+.cards.cards12 > ul > li {
+  background: #fff;
+  border: none;
+  border-radius: 32px;
+  box-shadow: none;
+  min-width: 375px;
+  max-width: 410px;
+  width: 100%;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+
+  /* This centers the content vertically in the card */
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Card content: vertical stack, left alignment */
+.cards.cards12 .cards-card-body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
+}
+
+/* Card content: vertical stack, push CTA row to bottom */
+.cards.cards4 .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  text-align: left;
+}
+
+/* Hide first .cards-card-body (empty) */
+.cards.cards7 .cards-card-body:first-child {
+  display: none;
+}
+
+/* Card content: fill card, vertical layout, CTAs at bottom */
+.cards.cards7 .cards-card-body:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+/* Hide empty first .cards-card-body if present */
+.cards.cards12 .cards-card-body:first-child:empty {
+  display: none;
+}
+
+/* Heading: navy, bold, appropriate spacing */
+.cards.cards12 .cards-card-body h3 {
+  color: #06145C;
+  font-size: 2rem;
+  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin: 0 0 12px;
+  line-height: 1.14;
+  text-decoration: none;
+}
+
+/* Supporting text: navy, slightly smaller, margin below */
+.cards.cards12 .cards-card-body p {
+  color: #06145C;
+  font-size: 1rem;
+  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+
+/* Link: navy, always underlined */
+.cards.cards12 .cards-card-body a {
+  color: #06145C;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* Button container: center horizontally, consistent margin above */
+.cards.cards12 .button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Outlined button: navy border/text, fully rounded, bold */
+.cards.cards12 .button-container .button {
+  display: inline-block;
+  background: transparent;
+  color: #06145C;
+  border: 2px solid #06145C;
+  border-radius: 999px;
+  font-size: 1.08rem;
+  font-weight: 800;
+  padding: 14px 46px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 220px;
+  box-shadow: none;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+.cards.cards12 .button-container .button:hover,
+.cards.cards12 .button-container .button:focus {
+  background: #06145C;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Disabled/Unavailable (middle card) button: gray, no border, disabled styles */
+.cards.cards12 > ul > li:nth-child(2) .button-container .button {
+  background: #E7E2E1;
+  color: #7B7671;
+  border: none;
+  pointer-events: none;
+  cursor: default;
+  font-weight: 700;
+}
+
+/* Responsive: stack cards on mobile, adjust padding and size */
+@media (width <= 1150px) {
+  .cards.cards12 > ul > li {
+    min-width: 290px;
+    max-width: 98vw;
+    padding: 30px 14px;
+  }
+}
+
+@media (width <= 800px) {
+  .cards.cards12 > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cards.cards12 > ul > li {
+    width: 100%;
+    min-width: 0;
+    max-width: 99vw;
+    padding: 24px 6vw;
+  }
+
+  .cards.cards12 .cards-card-body h3 {
+    font-size: 1.22rem;
+    margin-bottom: 10px;
+  }
+
+  .cards.cards12 .cards-card-body p {
+    font-size: 0.98rem;
+    margin-bottom: 10px;
+  }
+
+  .cards.cards12 .button-container .button {
+    font-size: 0.97rem;
+    padding: 12px 16px;
+    min-width: 130px;
+  }
+}
+
 /* Merged .cards.cards4 selector */
 .cards.cards4 {
   background: #A5D1B4;
@@ -66,18 +261,7 @@
   margin-bottom: 0;
 }
 
-/* Card content: vertical stack, push CTA row to bottom */
-.cards.cards4 .cards-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-start;
-  height: 100%;
-  position: relative;
-  text-align: left;
-}
+
 
 /* Headings: navy, underline, margin */
 .cards.cards4 .cards-card-body h3,
@@ -89,6 +273,12 @@
   margin: 0 0 16px;
   line-height: 1.2;
   font-family: var(--body-font-family);
+}
+
+.cards.cards12 .cards-card-body a:visited {
+  color: #06145C;
+  text-decoration: underline;
+  font-weight: 400;
 }
 
 /* Place .cards.cards10 .cards-card-body p selector BEFORE .cards.cards4 .cards-card-body p:not(.button-container) to fix specificity */
@@ -236,12 +426,6 @@
 }
 
 /* --- MERGED .cards.cards12 --- */
-.cards.cards12 {
-  background: #f5efea;
-  padding: 40px 0;
-}
-
-/* --- MERGED END .cards.cards12 --- */
 
 /* --- MERGED .cards.cards7 selector --- */
 .cards.cards7 {
@@ -280,23 +464,7 @@
   box-sizing: border-box;
 }
 
-/* Hide first .cards-card-body (empty) */
-.cards.cards7 .cards-card-body:first-child {
-  display: none;
-}
 
-/* Card content: fill card, vertical layout, CTAs at bottom */
-.cards.cards7 .cards-card-body:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1 1 auto;
-  min-width: 0;
-  padding: 0;
-  text-align: left;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
-}
 
 /* Headings */
 .cards.cards7 .cards-card-body:last-child h3,
@@ -444,167 +612,6 @@
   width: 100%;
 }
 
-
-/* --- GENERATED CSS --- */
-
-.cards.cards12 > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 32px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Each card: large rounding, no border, top-aligned content, wider card */
-.cards.cards12 > ul > li {
-  background: #fff;
-  border: none;
-  border-radius: 32px;
-  box-shadow: none;
-  min-width: 375px;
-  max-width: 410px;
-  width: 100%;
-  padding: 44px 36px;
-  display: flex;
-  flex-direction: column;
-
-  /* This centers the content vertically in the card */
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-/* Hide empty first .cards-card-body if present */
-.cards.cards12 .cards-card-body:first-child:empty {
-  display: none;
-}
-
-/* Card content: vertical stack, left alignment */
-.cards.cards12 .cards-card-body {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
-}
-
-/* Heading: navy, bold, appropriate spacing */
-.cards.cards12 .cards-card-body h3 {
-  color: #06145C;
-  font-size: 2rem;
-  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  margin: 0 0 12px;
-  line-height: 1.14;
-  text-decoration: none;
-}
-
-/* Supporting text: navy, slightly smaller, margin below */
-.cards.cards12 .cards-card-body p {
-  color: #06145C;
-  font-size: 1rem;
-  font-family: 'Help Type Text Web', Inter, Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  margin: 0 0 18px;
-}
-
-/* Link: navy, always underlined */
-.cards.cards12 .cards-card-body a,
-.cards.cards12 .cards-card-body a:visited {
-  color: #06145C;
-  text-decoration: underline;
-  font-weight: 400;
-}
-
-/* Button container: center horizontally, consistent margin above */
-.cards.cards12 .button-container {
-  width: 100%;
-  text-align: center;
-  margin-top: 28px;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-/* Outlined button: navy border/text, fully rounded, bold */
-.cards.cards12 .button-container .button {
-  display: inline-block;
-  background: transparent;
-  color: #06145C;
-  border: 2px solid #06145C;
-  border-radius: 999px;
-  font-size: 1.08rem;
-  font-weight: 800;
-  padding: 14px 46px;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-  cursor: pointer;
-  font-family: inherit;
-  min-width: 220px;
-  box-shadow: none;
-  margin: 0 auto;
-  line-height: 1.2;
-}
-
-.cards.cards12 .button-container .button:hover,
-.cards.cards12 .button-container .button:focus {
-  background: #06145C;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Disabled/Unavailable (middle card) button: gray, no border, disabled styles */
-.cards.cards12 > ul > li:nth-child(2) .button-container .button {
-  background: #E7E2E1;
-  color: #7B7671;
-  border: none;
-  pointer-events: none;
-  cursor: default;
-  font-weight: 700;
-}
-
-/* Responsive: stack cards on mobile, adjust padding and size */
-@media (width <= 1150px) {
-  .cards.cards12 > ul > li {
-    min-width: 290px;
-    max-width: 98vw;
-    padding: 30px 14px;
-  }
-}
-
-@media (width <= 800px) {
-  .cards.cards12 > ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .cards.cards12 > ul > li {
-    width: 100%;
-    min-width: 0;
-    max-width: 99vw;
-    padding: 24px 6vw;
-  }
-
-  .cards.cards12 .cards-card-body h3 {
-    font-size: 1.22rem;
-    margin-bottom: 10px;
-  }
-
-  .cards.cards12 .cards-card-body p {
-    font-size: 0.98rem;
-    margin-bottom: 10px;
-  }
-
-  .cards.cards12 .button-container .button {
-    font-size: 0.97rem;
-    padding: 12px 16px;
-    min-width: 130px;
-  }
-}
 
 /* --- MERGED .cards.cards13 --- */
 .cards.cards13 {
