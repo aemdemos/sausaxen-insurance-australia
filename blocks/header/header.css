@@ -266,3 +266,158 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* Merged .header selector */
+header .header,
+footer .footer {
+  visibility: hidden;
+}
+
+header .header[data-block-status="loaded"],
+footer .footer[data-block-status="loaded"] {
+  visibility: visible;
+}
+
+.header-wrapper .header.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  background: #fff;
+  border-bottom: 2px solid #ededf4;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1264px;
+  font-family: var(--body-font-family);
+}
+
+/* Brand/logo section (first child) */
+.header-wrapper .header.block > *:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.header-wrapper .header.block > *:nth-child(1) img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+/* Navigation section (second child) */
+.header-wrapper .header.block > *:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 32px;
+}
+
+/* Tools/buttons section (third child, right-aligned) */
+.header-wrapper .header.block > *:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  margin-left: auto;
+}
+
+/* Primary and secondary CTA button styles */
+.header-wrapper .header.block > *:nth-child(3) .button,
+.header-wrapper .header.block > *:nth-child(3) button,
+.header-wrapper .header.block > *:nth-child(3) a.button {
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000e6d;
+  color: #fff;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.header-wrapper .header.block > *:nth-child(3) .button.secondary,
+.header-wrapper .header.block > *:nth-child(3) button.secondary,
+.header-wrapper .header.block > *:nth-child(3) a.button.secondary {
+  background: #fff;
+  color: #000e6d;
+  border: 2px solid #000e6d;
+}
+
+/* Circular user icon button */
+.header-wrapper .header.block > *:nth-child(3) .icon,
+.header-wrapper .header.block > *:nth-child(3) .icon-btn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background: #000e6d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: none;
+  margin-left: 12px;
+  padding: 0;
+}
+
+.header-wrapper .header.block > *:nth-child(3) > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation links styling if menu exists */
+.header-wrapper .header.block > *:nth-child(2) ul {
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.header-wrapper .header.block > *:nth-child(2) li {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive: tighter padding and stacking on small screens */
+@media (width <= 900px) {
+  .header-wrapper .header.block {
+    min-height: 56px;
+    padding: 0 12px;
+    border-bottom: 2px solid #ededf4;
+  }
+
+  .header-wrapper .header.block > *:nth-child(1) {
+    gap: 8px;
+  }
+
+  .header-wrapper .header.block > *:nth-child(2) {
+    gap: 16px;
+  }
+
+  .header-wrapper .header.block > *:nth-child(3) {
+    gap: 12px;
+  }
+}
