@@ -1,4 +1,5 @@
 
+
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
@@ -574,28 +575,10 @@ footer .footer[data-block-status="loaded"] {
 }
 
 /* ----------- MERGED .header SELECTOR ----------- */
-.header,
-footer .footer {
-  visibility: hidden;
-}
-
-.header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
-  visibility: visible;
-}
-
-.header-wrapper .header.block {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 64px;
+.header {
   background: #fff;
-  border-bottom: 2px solid #ededf4;
   width: 100%;
-  box-sizing: border-box;
-  padding: 0 32px;
-  margin: 0 auto;
-  max-width: 1264px;
+  min-height: 56px;
+  border-bottom: 1px solid #d8dbe5;
   font-family: var(--body-font-family);
 }
