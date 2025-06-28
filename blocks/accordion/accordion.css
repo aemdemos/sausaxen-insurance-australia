@@ -1,14 +1,59 @@
+/* Accordion base styles */
+.accordion.accordion11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #e5e47b;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.accordion.accordion11 > * {
+  width: 100%;
+  max-width: 540px;
+  margin: 64px auto 64px clamp(56px, 10vw, 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
 .accordion details {
   border: 1px solid #dadada;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .accordion details + details {
   margin-top: 24px;
 }
 
 .accordion details p {
   margin-bottom: 0.8em;
+}
+
+.accordion.accordion11 > details {
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 22px;
+}
+
+.accordion.accordion11 details {
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: none;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s, background 0.2s;
+  padding: 0;
+}
+
+.accordion.accordion11 details:last-child {
+  margin-bottom: 0;
 }
 
 .accordion.accordion11 summary,
@@ -28,38 +73,10 @@
   transition: background 0.2s;
   min-height: 30px;
   box-sizing: border-box;
-}
-
-.accordion.accordion11 summary:hover,
-.accordion.accordion11 details[open] summary,
-.accordion.accordion11 details[open] .accordion-item-label {
-  background: #f2f3ee;
+  border: none;
 }
 
 .accordion.accordion11 summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion details summary {
-  position: relative;
-  padding: 0 16px;
-  padding-right: 46px;
-  cursor: pointer;
-  list-style: none;
-  overflow: auto;
-  transition: background-color 0.2s;
-}
-
-.accordion details[open] summary {
-  background-color: var(--light-color);
-}
-
-.accordion details summary:focus,
-.accordion details summary:hover {
-  background-color: var(--light-color);
-}
-
-.accordion details summary::-webkit-details-marker {
   display: none;
 }
 
@@ -75,9 +92,23 @@
   transition: transform 0.2s;
 }
 
-.accordion.accordion11 details[open] summary::after,
-.accordion.accordion11 details[open] .accordion-item-label::after {
-  transform: rotate(180deg);
+.accordion details summary {
+  position: relative;
+  padding: 0 16px;
+  padding-right: 46px;
+  cursor: pointer;
+  list-style: none;
+  overflow: auto;
+  transition: background-color 0.2s;
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion details summary:focus,
+.accordion details summary:hover {
+  background-color: var(--light-color);
 }
 
 .accordion details summary::after {
@@ -93,8 +124,32 @@
   transition: transform 0.2s;
 }
 
+.accordion details[open] summary {
+  background-color: var(--light-color);
+}
+
 .accordion details[open] summary::after {
   transform: translateY(-50%) rotate(-45deg);
+}
+
+.accordion details .accordion-item-body {
+  padding: 0 16px;
+}
+
+.accordion details[open] .accordion-item-body {
+  border-top: 1px solid #dadada;
+  background-color: var(--background-color);
+}
+
+.accordion.accordion11 details[open] summary::after,
+.accordion.accordion11 details[open] .accordion-item-label::after {
+  transform: rotate(180deg);
+}
+
+.accordion.accordion11 summary:hover,
+.accordion.accordion11 details[open] summary,
+.accordion.accordion11 details[open] .accordion-item-label {
+  background: #f2f3ee;
 }
 
 .accordion.accordion11 .accordion-item-body {
@@ -107,44 +162,11 @@
   box-sizing: border-box;
 }
 
-.accordion details .accordion-item-body {
-  padding: 0 16px;
-}
-
-.accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.accordion.accordion11 {
-  background: #dbdb6d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 16px;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.accordion.accordion11 > details {
-  width: 100%;
-  max-width: 540px;
-  margin-bottom: 22px;
-}
-
-.accordion.accordion11 details {
-  background: #fff;
-  border: none;
-  border-radius: 18px;
-  box-shadow: none;
-  font-family: Inter, Arial, sans-serif;
-  width: 100%;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, background 0.2s;
-}
-
-.accordion.accordion11 details:last-child {
-  margin-bottom: 0;
+@media (width <= 900px) {
+  .accordion.accordion11 > * {
+    max-width: 100%;
+    margin: 32px 0;
+  }
 }
 
 @media (width <= 700px) {
