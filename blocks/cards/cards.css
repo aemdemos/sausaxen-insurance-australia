@@ -1,4 +1,5 @@
 
+
 /* --- CARDS GENERAL GRID --- */
 .cards > ul {
   list-style: none;
@@ -28,9 +29,10 @@
   object-fit: cover;
 }
 
+/* Merged .cards.cards4 selector */
 .cards.cards4 {
-  background: #9ac8b2;
-  padding: 48px 0;
+  background: #A5D1B4;
+  padding: 40px 0;
 }
 
 /* Flex row layout for the card grid */
@@ -59,6 +61,7 @@
   flex-direction: column;
   min-height: 380px;
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 
 /* Card content: vertical stack, push CTA row to bottom */
@@ -71,21 +74,19 @@
   justify-content: flex-start;
   height: 100%;
   position: relative;
+  text-align: left;
 }
 
 /* Headings: navy, underline, margin */
-.cards.cards4 .cards-card-body h3 {
-  color: #00115a;
-  font-size: 28px;
+.cards.cards4 .cards-card-body h3,
+.cards.cards4 .cards-card-body h3 a {
+  color: #00105A;
+  font-size: 32px;
   font-weight: 700;
   text-decoration: underline;
   margin: 0 0 16px;
   line-height: 1.2;
-}
-
-.cards.cards4 .cards-card-body h3 a {
-  color: #00115a;
-  text-decoration: underline;
+  font-family: var(--body-font-family);
 }
 
 /* Place .cards.cards10 .cards-card-body p selector BEFORE .cards.cards4 .cards-card-body p:not(.button-container) to fix specificity */
@@ -100,66 +101,67 @@
 }
 
 .cards.cards4 .cards-card-body p:not(.button-container) {
-  color: #00115a;
+  color: #00105A;
   font-size: 18px;
+  font-family: var(--body-font-family);
   font-weight: 400;
-  margin: 0 0 40px;
+  margin: 0 0 32px;
+  line-height: 1.6;
 }
 
-/* Remove margin from all button containers for tight row */
-.cards.cards4 .cards-card-body p.button-container {
+/* Hide all button-containers by default */
+.cards.cards4 .cards-card-body > p.button-container {
+  display: none;
   margin: 0;
   padding: 0;
 }
 
-/* Wrap the last two .button-container p's in a flex row using :nth-last-child and sibling selector */
-.cards.cards4 .cards-card-body p.button-container:nth-last-child(2) {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 24px;
+/* Show the last two button-containers inline, side by side at the bottom */
+.cards.cards4 .cards-card-body > p.button-container:nth-last-child(2),
+.cards.cards4 .cards-card-body > p.button-container:last-child {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+/* Add gap to the first CTA */
+.cards.cards4 .cards-card-body > p.button-container:nth-last-child(2) {
   margin-top: auto;
+  margin-right: 24px;
 }
 
-/* Remove default spacing from "Learn more" paragraph so both CTAs sit on a single row */
-.cards.cards4 .cards-card-body p.button-container:last-child {
-  margin-left: 0;
-}
-
-/* "Get a quote" button */
-.cards.cards4 .cards-card-body p.button-container:nth-last-child(2) a.button {
-  background: #00115a;
+/* Fix typography for CTAs */
+.cards.cards4 .cards-card-body > p.button-container:nth-last-child(2) > a.button {
+  background: #00105A;
   color: #fff;
-  border-radius: 32px;
+  border-radius: 999px;
   font-size: 18px;
+  font-family: var(--body-font-family);
   font-weight: 700;
-  padding: 14px 32px;
+  padding: 12px 36px;
   text-decoration: none;
   border: none;
   box-shadow: none;
   display: inline-block;
   line-height: 1.4;
-  min-width: 0;
-  min-height: 0;
-  margin-right: 0;
+  margin: 0;
 }
 
-/* "Learn more" link: plain text link, navy, underlined, regular weight */
-.cards.cards4 .cards-card-body p.button-container:last-child a.button {
+.cards.cards4 .cards-card-body > p.button-container:last-child > a.button {
   background: none;
-  color: #00115a;
+  color: #00105A;
   text-decoration: underline;
   font-weight: 400;
   font-size: 18px;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
-  margin-left: 0;
-  min-width: 0;
-  min-height: 0;
+  border: none;
   display: inline-block;
   line-height: 1.4;
-  border: none;
+  margin-left: 0;
 }
 
 /* Responsive: stack cards on smaller screens */
@@ -172,6 +174,18 @@
     min-width: 240px;
     max-width: 100%;
     width: 45%;
+  }
+}
+
+@media (width <= 1100px) {
+  .cards.cards4 > ul {
+    gap: 24px;
+  }
+
+  .cards.cards4 > ul > li {
+    width: 45%;
+    min-width: 260px;
+    max-width: 100%;
   }
 }
 
@@ -189,442 +203,33 @@
   }
 }
 
-/* --- CARDS7 (MERGED SELECTOR FIX) --- */
-.cards.cards7 {
-  background: #f6f0ea;
-  padding: 32px 0;
-}
-
-.cards.cards7 > ul {
-  display: grid;
-  grid-template-columns: repeat(3, 356px);
-  justify-content: center;
-  gap: 32px;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  align-items: stretch;
-}
-
-.cards.cards7 > ul > li {
-  background: #fff;
-  border: none;
-  border-radius: 24px;
-  box-shadow: none;
-  padding: 32px 32px 20px;
-  width: 356px;
-  max-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  height: 100%;
-}
-
-/* Card body structure */
-.cards.cards7 .cards-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: 0;
-  margin: 0;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #27232b;
-  line-height: 1.5;
-  height: 100%;
-}
-
-/* Heading styling */
-.cards.cards7 .cards-card-body h3,
-.cards.cards7 .cards-card-body h3 a {
-  color: #001164;
-  text-decoration: underline;
-  font-weight: 800;
-  font-size: 1.5rem;
-  margin: 0 0 16px;
-  line-height: 1.15;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  text-align: left;
-}
-
-.cards.cards7 .cards-card-body p:not(.button-container) {
-  color: #27232b;
-  font-size: 1rem;
-  margin-bottom: 12px;
-  margin-top: 0;
-}
-
-/* Superscript for references */
-.cards.cards7 .cards-card-body sup {
-  font-size: 0.7em;
-  vertical-align: super;
-}
-
-/* Button row: always horizontal, bottom-aligned with tight bottom gap */
-.cards.cards7 .cards-card-body .button-container {
-  margin: 0;
-  padding: 0;
-}
-
-.cards.cards7 .cards-card-body .button-container:nth-last-child(2) {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  margin-top: auto;
-  margin-bottom: 0;
-  width: 100%;
-  align-items: center;
-}
-
-.cards.cards7 .cards-card-body .button-container:last-child {
-  margin: 0;
-}
-
-/* Get a quote button */
-.cards.cards7 .cards-card-body .button-container:nth-last-child(2) .button {
-  background: #001164;
-  color: #fff;
-  border-radius: 24px;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 12px 32px;
-  text-decoration: none;
-  border: none;
-  box-shadow: none;
-  display: inline-block;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Learn more link */
-.cards.cards7 .cards-card-body .button-container:last-child .button {
-  background: none;
-  color: #001164;
-  text-decoration: underline;
-  font-weight: 400;
-  font-size: 1rem;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  border: none;
-  display: inline-block;
-  line-height: 1.4;
-  margin: 0;
-}
-
-@media (width <= 1150px) {
-  .cards.cards7 > ul {
-    grid-template-columns: repeat(2, 356px);
-    gap: 32px;
-  }
-}
-
 @media (width <= 800px) {
-  .cards.cards7 > ul {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 24px;
+  .cards.cards4 > ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
 
-  .cards.cards7 > ul > li {
+  .cards.cards4 > ul > li {
     width: 100%;
     min-width: 0;
-    max-width: 100%;
-    padding: 24px 16px 14px;
-  }
-}
-
-/* --- GENERATED CSS (EXCEPT .cards.cards10 block which will be merged below) --- */
-
-.cards.cards10 > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  gap: 36px;
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  max-width: 1080px;
-  width: 100%;
-}
-
-.cards.cards10 > ul > li {
-  background: #fff;
-  border: none;
-  border-radius: 32px;
-  box-shadow: 0 2px 16px rgb(0 13 93 / 3%);
-  width: 380px;
-  max-width: 98vw;
-  min-width: 310px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 44px 42px 32px;
-  box-sizing: border-box;
-}
-
-.cards.cards10 .cards-card-image {
-  margin-bottom: 12px;
-  margin-top: 0;
-  text-align: left;
-}
-
-.cards.cards10 .cards-card-image picture,
-.cards.cards10 .cards-card-image img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  display: inline-block;
-}
-
-.cards.cards10 .cards-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  padding: 0;
-  margin: 0;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.cards.cards10 .cards-card-body h3,
-.cards.cards10 .cards-card-body h3 a {
-  color: #000D5D;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-size: 1.9rem;
-  font-weight: 700;
-  text-decoration: underline;
-  margin: 0 0 16px;
-  line-height: 1.19;
-  text-align: left;
-  letter-spacing: 0;
-}
-
-.cards.cards10 .cards-card-body p:last-of-type {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  margin: 0;
-  margin-top: 20px;
-  width: 100%;
-  padding: 0;
-}
-
-.cards.cards10 .cards-card-body a[title*="Get a quote"] {
-  background: #000D5D;
-  color: #fff;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border-radius: 999px;
-  font-size: 1.06rem;
-  line-height: 1.3;
-  padding: 14px 36px;
-  text-decoration: none;
-  border: none;
-  display: inline-block;
-  letter-spacing: 0;
-  transition: background 0.15s;
-  box-shadow: none;
-}
-
-.cards.cards10 .cards-card-body a[title*="Get a quote"]:hover,
-.cards.cards10 .cards-card-body a[title*="Get a quote"]:focus {
-  background: #001164;
-}
-
-.cards.cards10 .cards-card-body a[title*="Learn more"] {
-  background: none;
-  color: #000D5D;
-  text-decoration: underline;
-  font-weight: 400;
-  font-size: 1.06rem;
-  border-radius: 0;
-  padding: 0;
-  display: inline-block;
-  margin-left: 0;
-  letter-spacing: 0;
-}
-
-@media (width <= 900px) {
-  .cards.cards10 {
-    padding: 28px 0;
-  }
-
-  .cards.cards10 > ul {
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    max-width: 98vw;
-  }
-
-  .cards.cards10 > ul > li {
-    width: 98vw;
-    min-width: 0;
     max-width: 99vw;
-    padding: 28px 5vw 20px;
+    padding: 24px 16px;
+  }
+
+  .cards.cards4 .cards-card-body h3,
+  .cards.cards4 .cards-card-body h3 a {
+    font-size: 22px;
+  }
+
+  .cards.cards4 .cards-card-body p:not(.button-container) {
+    font-size: 16px;
+  }
+
+  .cards.cards4 .cards-card-body > p.button-container:nth-last-child(2) > a.button,
+  .cards.cards4 .cards-card-body > p.button-container:last-child > a.button {
+    font-size: 16px;
+    padding: 10px 24px;
   }
 }
 
-/* --- MERGED .cards.cards10 SELECTOR BELOW --- */
-.cards.cards10 {
-  background: #FCB4A2;
-  padding: 56px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.cards.cards12 {
-  background: #f5efea;
-  padding: 56px 0;
-}
-
-.cards.cards12 > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 32px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cards.cards12 > ul > li {
-  background: #fff;
-  border-radius: 24px;
-  border: none;
-  box-shadow: none;
-  min-width: 340px;
-  max-width: 340px;
-  width: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 36px 28px;
-  box-sizing: border-box;
-  min-height: 332px;
-}
-
-.cards.cards12 .cards-card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.cards.cards12 .cards-card-body h3 {
-  color: #0a1954;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-size: 2.1rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 0 0 16px;
-  width: 100%;
-  text-align: left;
-}
-
-.cards.cards12 .cards-card-body p {
-  color: #0a1954;
-  font-family: "Help Type Text Web", Helvetica, Arial, sans-serif;
-  font-size: 1.08rem;
-  font-weight: 400;
-  line-height: 1.42;
-  margin: 0 0 20px;
-  text-align: left;
-  width: 100%;
-}
-
-.cards.cards12 .cards-card-body p.button-container {
-  margin: 0;
-  display: block;
-  width: 100%;
-}
-
-.cards.cards12 .cards-card-body a:not(.button) {
-  color: #0a1954;
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.cards.cards12 .cards-card-body a.button {
-  background: #fff;
-  color: #0a1954;
-  border: 2px solid #0a1954;
-  border-radius: 999px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  padding: 10px 24px;
-  line-height: 1.3;
-  min-width: 0;
-  width: fit-content;
-  box-shadow: none;
-  margin: 0 auto 0 0;
-  display: block;
-  text-align: center;
-  transition: background 0.2s, color 0.2s, border 0.2s;
-}
-
-.cards.cards12 .cards-card-body a.button:hover,
-.cards.cards12 .cards-card-body a.button:focus {
-  background: #e7e1dd;
-  color: #0a1954;
-  border-color: #0a1954;
-}
-
-.cards.cards12 > ul > li:nth-child(2) .cards-card-body a.button {
-  background: #e7e1dd;
-  color: #7f736a;
-  border: none;
-  pointer-events: none;
-  font-weight: 500;
-  margin: 0 auto 0 0;
-  width: fit-content;
-  min-width: 0;
-}
-
-@media (width <= 1050px) {
-  .cards.cards12 > ul {
-    gap: 20px;
-  }
-
-  .cards.cards12 > ul > li {
-    padding: 24px 4vw;
-    min-width: 220px;
-    width: 90vw;
-    max-width: 98vw;
-  }
-}
-
-@media (width <= 700px) {
-  .cards.cards12 > ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .cards.cards12 > ul > li {
-    padding: 18px 2vw;
-    min-width: 0;
-    width: 96vw;
-    max-width: 99vw;
-  }
-
-  .cards.cards12 .cards-card-body h3 {
-    font-size: 1.15rem;
-    margin-bottom: 12px;
-  }
-
-  .cards.cards12 .cards-card-body p {
-    font-size: 0.98rem;
-    margin-bottom: 16px;
-  }
-}
