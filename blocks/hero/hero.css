@@ -1,9 +1,13 @@
-
 /*
  * All no-descending-specificity and no-duplicate-selectors errors fixed.
  * - Duplicates merged, keeping cascade and specificity.
  * - Selectors reordered so less specific ones come before more specific ones.
  */
+
+.hero-wrapper {
+  background: #f7f2ec;
+  padding: 64px 0;
+}
 
 .hero-container .hero-wrapper {
   max-width: unset;
@@ -74,7 +78,6 @@
   box-sizing: border-box;
   padding: 0;
 }
-
 /* ---- END MERGED ---- */
 
 .hero.hero3 > div {
@@ -128,16 +131,6 @@
   letter-spacing: normal;
 }
 
-.hero.hero5 p {
-  font-family: "Help Type Text Web", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: #001489;
-  line-height: 1.3;
-  text-align: left;
-  margin: 0 0 16px;
-  max-width: 100%;
-}
-
 .hero.hero3 p,
 .hero[data-block-name="hero"] p {
   color: #fff;
@@ -184,7 +177,8 @@
   font-weight: 400;
 }
 
-.hero.hero3 h5, .hero.hero3 h5 ~ p {
+.hero.hero3 h5,
+.hero.hero3 h5 ~ p {
   background: #f7f4ed;
   color: #020F66;
   border-radius: 28px;
@@ -218,54 +212,20 @@
   cursor: pointer;
 }
 
-.hero.hero5 {
-  background: #fff;
-  border-radius: 48px;
-  max-width: 1280px;
-  margin: 64px auto;
-  padding: 64px 56px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-height: 420px;
-}
-
-/* Hide empty left column if present */
-.hero.hero5 > div:first-child {
-  display: none;
-}
-
-/* Main content column: use full available width and left-align content */
-.hero.hero5 > div:last-child {
-  flex: 1 1 0;
-  max-width: none;
-  width: 100%;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  justify-content: center;
-}
-
-/* Heading: large, blue, left-aligned */
-.hero.hero5 h2,
-.hero.hero5 h1 {
-  font-family: "Help Type Display Web", Arial, Helvetica, sans-serif;
-  font-size: 3rem;
-  font-weight: 800;
+.hero.hero5 p {
+  font-family: "Help Type Text Web", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   color: #001489;
-  line-height: 1.1;
-  margin: 0 0 32px;
+  line-height: 1.3;
   text-align: left;
+  margin: 0 0 16px;
+  max-width: 100%;
 }
 
 .hero.hero5 p:last-child {
   margin-bottom: 0;
 }
 
-/* --- Merged duplicate selectors and ordered for no-descending-specificity --- */
 .hero.hero3,
 .hero[data-block-name="hero"] {
   background: #f7b199;
@@ -279,7 +239,6 @@
   box-sizing: border-box;
 }
 
-/* Left (empty/image) column */
 .hero.hero3 > div:first-child,
 .hero[data-block-name="hero"] > div:first-child {
   flex-basis: 60%;
@@ -289,7 +248,6 @@
   display: block;
 }
 
-/* Hide image if present in the left column */
 .hero.hero3 > div:first-child picture,
 .hero.hero3 > div:first-child img,
 .hero[data-block-name="hero"] > div:first-child picture,
@@ -297,7 +255,6 @@
   display: none;
 }
 
-/* Right content column */
 .hero.hero3 > div:last-child,
 .hero[data-block-name="hero"] > div:last-child {
   flex-basis: 40%;
@@ -309,7 +266,6 @@
   justify-content: flex-start;
 }
 
-/* Stack of content inside right column */
 .hero.hero3 > div:last-child > div,
 .hero[data-block-name="hero"] > div:last-child > div {
   display: flex;
@@ -320,7 +276,6 @@
   margin: 0;
 }
 
-/* Headings */
 .hero.hero3 h1,
 .hero.hero3 h2,
 .hero[data-block-name="hero"] h1,
@@ -335,7 +290,6 @@
   letter-spacing: normal;
 }
 
-/* Paragraphs, subtext, h5 */
 .hero.hero3 p,
 .hero.hero3 sub,
 .hero.hero3 h5,
@@ -350,7 +304,6 @@
   text-align: left;
 }
 
-/* Paragraphs and subtext sizing */
 .hero.hero3 p,
 .hero[data-block-name="hero"] p,
 .hero.hero3 sub,
@@ -362,7 +315,6 @@
   max-width: 100%;
 }
 
-/* h5 styling */
 .hero.hero3 h5,
 .hero[data-block-name="hero"] h5 {
   font-size: 22px;
@@ -372,7 +324,6 @@
   max-width: 100%;
 }
 
-/* Only the final paragraph is the CTA button */
 .hero.hero3 > div:last-child > div > p:last-of-type,
 .hero[data-block-name="hero"] > div:last-child > div > p:last-of-type {
   display: inline-block;
@@ -392,20 +343,17 @@
   transition: background 0.2s;
 }
 
-/* Button hover effect */
 .hero.hero3 > div:last-child > div > p:last-of-type:hover,
 .hero[data-block-name="hero"] > div:last-child > div > p:last-of-type:hover {
   background: rgb(21 22 104 / 6%);
 }
 
-/* Remove underline and set color for links */
 .hero.hero3 a,
 .hero[data-block-name="hero"] a {
   color: #151668;
   text-decoration: underline;
 }
 
-/* Responsive: stack columns on mobile */
 @media (width <= 900px) {
   .hero.hero3,
   .hero[data-block-name="hero"] {
@@ -457,169 +405,105 @@
   }
 }
 
-
-/* === GENERATED CSS: All selectors except merged .hero.hero3 remain unchanged === */
-
-.hero.hero3 > div:first-child {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  margin-top: 64px;
-  margin-bottom: 28px;
-  gap: 36px; /* space between icons if there are two */
-}
-
-.hero.hero3 > div:first-child picture,
-.hero.hero3 > div:first-child img {
-  display: block;
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  margin: 0;
-}
-
-/* MAIN HERO CONTENT CONTAINER */
-.hero.hero3 > div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-/* Headline and promo text on blue, centered */
-.hero.hero3 > div:nth-child(2) > h1,
-.hero.hero3 > div:nth-child(2) > h1 + p {
-  color: #020f66;
-  text-align: left;
-  width: 100%;
-}
-
-.hero.hero3 > div:nth-child(2) > h1 {
-  color: #020f66;
-  font-size: 2.5rem;
-  font-family: var(--heading-font-family);
-  font-weight: 800;
-  margin: 0 0 18px;
-  line-height: 1.1;
-}
-
-.hero.hero3 > div:nth-child(2) > h1 + p {
-  color: #020f66;
-  font-size: 1.15rem;
-  line-height: 1.5;
-  margin: 0 0 6px;
-}
-
-.hero.hero3 > div:nth-child(2) > h1 + p + p {
-  color: #fff;
-  opacity: 0.75;
-  font-size: 1rem;
-  text-align: center;
-  margin: 18px 0 0;
-  width: 100%;
-}
-
-/* CARD - Only wrap the CTA, slightly reduce width to match original */
-.hero.hero3 > div:nth-child(2) > div {
-  background: #f9f7f4;
-  border-radius: 32px;
-  box-shadow: 0 4px 24px rgb(0 12 87 / 10%);
-  margin: 38px auto 0;
-  max-width: 440px;
-  width: 100%;
-  padding: 36px 36px 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-/* CTA heading in card */
-.hero.hero3 > div:nth-child(2) > div h5 {
-  color: #020f66;
-  font-size: 1.18rem;
-  font-weight: 700;
-  margin: 0 0 16px;
-  background: none;
-  text-align: left;
-}
-
-/* Main CTA text in card */
-.hero.hero3 > div:nth-child(2) > div h5 + p {
-  color: #020f66;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 28px;
-  text-align: left;
-}
-
-/* Hide extra "bubble" p's between h5 and last-child (if present) */
-.hero.hero3 > div:nth-child(2) > div h5 ~ p:not(:last-child, :first-child) {
+.hero.hero5 > div:first-child {
   display: none;
 }
 
-/* CTA "Get a quote" button */
-.hero.hero3 > div:nth-child(2) > div p:last-child {
-  background: #020f66;
-  color: #fff;
-  font-size: 1.18rem;
-  font-weight: 700;
-  padding: 16px 40px;
-  border-radius: 999px;
-  border: none;
-  margin: 24px 0 0;
-  display: inline-block;
-  text-align: center;
-  box-shadow: 0 2px 8px rgb(0 12 87 / 12%);
-  cursor: pointer;
-  transition: background 0.2s;
-  box-sizing: border-box;
-}
-
-.hero.hero3 > div:nth-child(2) > div p:last-child:hover {
-  background: #001a5a;
-}
-
-/* Responsive adjustments */
-@media (width <= 700px) {
-  .hero.hero3 > div:nth-child(2) {
-    max-width: 98vw;
-    padding: 0 2vw;
-  }
-
-  .hero.hero3 > div:nth-child(2) > div {
-    max-width: 98vw;
-    padding: 16px 5vw 20px;
-  }
-
-  .hero.hero3 > div:first-child picture,
-  .hero.hero3 > div:first-child img {
-    width: 64px;
-    height: 64px;
-  }
-
-  .hero.hero3 > div:nth-child(2) > h1 {
-    font-size: 1.6rem;
-  }
-}
-
-/* ---- MERGED .hero.hero3 SELECTOR ---- */
-.hero.hero3 {
-  background: #020f66;
-  min-height: 100vh;
-  width: 100vw;
+.hero.hero5 > div:last-child {
+  flex: 1 1 0;
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
   box-sizing: border-box;
-  padding: 0;
 }
 
-/* ---- END MERGED .hero.hero3 ---- */
+.hero.hero5 > div:last-child > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  gap: 56px;
+}
+
+.hero.hero5 > div:last-child > div > h2 {
+  flex: 0 0 44%;
+  max-width: 44%;
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #091d6e;
+  line-height: 1.1;
+  text-align: left;
+  letter-spacing: normal;
+  align-self: flex-start;
+}
+
+.hero.hero5 > div:last-child > div > p {
+  flex: 1 1 56%;
+  max-width: 56%;
+  color: #091d6e;
+  font-family: var(--body-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  text-align: left;
+  display: block;
+}
+
+.hero.hero5 > div:last-child > div > p:last-child {
+  margin-bottom: 0;
+  font-weight: 400;
+  border: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (width <= 900px) {
+  .hero.hero5 {
+    flex-direction: column;
+    padding: 32px 12px;
+    border-radius: 18px;
+    min-height: unset;
+  }
+  .hero.hero5 > div:last-child {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero.hero5 > div:last-child > div {
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero.hero5 > div:last-child > div > h2,
+  .hero.hero5 > div:last-child > div > p {
+    max-width: 100%;
+    margin: 0 0 18px;
+    font-size: 2rem;
+  }
+}
+
+.hero.hero5 {
+  background: #fff;
+  border-radius: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  box-shadow: none;
+  min-height: 400px;
+}
