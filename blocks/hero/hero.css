@@ -1,3 +1,4 @@
+
 /*
  * All no-descending-specificity and no-duplicate-selectors errors fixed.
  * - Duplicates merged, keeping cascade and specificity.
@@ -14,19 +15,22 @@
   padding: 0;
 }
 
+/* --- .hero merged below --- */
+
 .hero {
-  /* Merged from both base and generated CSS */
-  position: relative;
-  padding: 0;
+  background: #f8ad97;
   min-height: 100vh;
-  background: #f7b199;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  width: 100vw;
   box-sizing: border-box;
+  padding: 0;
+  position: relative;
 }
+
+/* --- END merged .hero --- */
 
 .hero h1,
 .hero h2,
@@ -78,6 +82,7 @@
   box-sizing: border-box;
   padding: 0;
 }
+
 /* ---- END MERGED ---- */
 
 .hero.hero3 > div {
@@ -477,15 +482,18 @@
     border-radius: 18px;
     min-height: unset;
   }
+
   .hero.hero5 > div:last-child {
     flex-direction: column;
     max-width: 100%;
     padding: 0;
   }
+
   .hero.hero5 > div:last-child > div {
     flex-direction: column;
     gap: 0;
   }
+
   .hero.hero5 > div:last-child > div > h2,
   .hero.hero5 > div:last-child > div > p {
     max-width: 100%;
@@ -507,3 +515,128 @@
   box-shadow: none;
   min-height: 400px;
 }
+
+/* ---- START generated CSS ---- */
+
+.hero > div:first-child picture,
+.hero > div:first-child img {
+  display: none;
+}
+
+.hero > div:last-child > div > h5,
+.hero > div:last-child > div > h5 ~ p {
+  display: none;
+}
+
+.hero > div:last-child > div > p:not(:first-of-type, :nth-of-type(2), :last-of-type) {
+  display: none;
+}
+
+.hero > div:last-child {
+  flex: 0 1 480px;
+  max-width: 480px;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero h1 {
+  color: #171053;
+  font-size: 48px;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 24px;
+  text-align: left;
+  letter-spacing: -1px;
+}
+
+.hero > div:last-child > div > p:first-of-type {
+  color: #171053;
+  font-size: 20px;
+  font-family: var(--body-font-family);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.hero > div:last-child > div > p:nth-of-type(2) {
+  color: #171053;
+  opacity: 0.85;
+  font-size: 15px;
+  margin: 0 0 32px;
+  text-align: left;
+}
+
+.hero > div:last-child > div > p:last-of-type {
+  display: inline-block;
+  padding: 14px 36px;
+  border: 2px solid #171053;
+  border-radius: 999px;
+  background: transparent;
+  color: #171053;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.2;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.hero > div:last-child > div > p:last-of-type a {
+  color: #171053;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (width <= 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 40px 5vw;
+  }
+
+  .hero > div:last-child {
+    margin-right: 0;
+    align-items: flex-end;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero > div:last-child > div {
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero > div:last-child > div > p:first-of-type {
+    font-size: 16px;
+  }
+
+  .hero > div:last-child > div > p:last-of-type {
+    font-size: 16px;
+    padding: 12px 22px;
+    margin-top: 24px;
+  }
+}
+
+/* ---- END generated CSS ---- */
