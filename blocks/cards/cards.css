@@ -1,6 +1,5 @@
 
 
-
 /* --- CARDS GENERAL GRID --- */
 .cards > ul {
   list-style: none;
@@ -423,5 +422,15 @@
     font-size: 15px;
     padding: 10px 20px;
   }
+}
+
+
+/* -- Merged .cards.cards10 from base and generated -- */
+.cards.cards10 {
+  background: #FCB4A2;
+  padding: 56px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
