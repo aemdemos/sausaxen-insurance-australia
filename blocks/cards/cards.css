@@ -1,5 +1,6 @@
 
 
+
 /* --- CARDS GENERAL GRID --- */
 .cards > ul {
   list-style: none;
@@ -230,6 +231,197 @@
   .cards.cards4 .cards-card-body > p.button-container:last-child > a.button {
     font-size: 16px;
     padding: 10px 24px;
+  }
+}
+
+/* --- MERGED .cards.cards7 selector --- */
+.cards.cards7 {
+  background: #f7f0ea;
+  padding: 40px 0;
+}
+
+/* --- Generated CSS starts here --- */
+
+.cards.cards7 > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Card: fill grid cell, stretch, control width --- */
+.cards.cards7 > ul > li {
+  background: #fff;
+  border-radius: 24px;
+  border: none;
+  box-shadow: none;
+  padding: 32px;
+  margin: 0;
+  min-width: 0;
+  max-width: 370px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Hide first .cards-card-body (empty) */
+.cards.cards7 .cards-card-body:first-child {
+  display: none;
+}
+
+/* Card content: fill card, vertical layout, CTAs at bottom */
+.cards.cards7 .cards-card-body:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+/* Headings */
+.cards.cards7 .cards-card-body:last-child h3,
+.cards.cards7 .cards-card-body:last-child h3 a {
+  color: #00005e;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Body text */
+.cards.cards7 .cards-card-body:last-child p:not(.button-container) {
+  color: #24224e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.cards.cards7 .cards-card-body:last-child sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+/* ---- CTA row: force horizontal, align to card bottom ---- */
+
+/* Remove margins on button-containers */
+.cards.cards7 .cards-card-body:last-child p.button-container {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+/* Force the last two button-containers into a flex row at the bottom */
+.cards.cards7 .cards-card-body:last-child .cards-card-ctas {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: auto;
+}
+
+.cards.cards7 .cards-card-body:last-child p.button-container:nth-last-child(2),
+.cards.cards7 .cards-card-body:last-child p.button-container:last-child {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+/* Simulate a flex row by displaying both as inline-flex and adding margin */
+.cards.cards7 .cards-card-body:last-child p.button-container:nth-last-child(2) {
+  margin-right: 24px;
+}
+
+/* "Get a quote" button */
+.cards.cards7 .cards-card-body:last-child p.button-container:nth-last-child(2) > a.button {
+  background: #00005e;
+  color: #fff;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  padding: 12px 32px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  display: inline-block;
+  line-height: 1.4;
+  white-space: nowrap;
+  min-width: 120px;
+  max-width: 200px;
+  overflow: visible;
+}
+
+/* "Learn more" link */
+.cards.cards7 .cards-card-body:last-child p.button-container:last-child > a.button {
+  background: none;
+  color: #00005e;
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  display: inline-block;
+  margin-left: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Responsive: stack cards vertically on small screens */
+@media (width <= 1000px) {
+  .cards.cards7 > ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .cards.cards7 > ul > li {
+    padding: 24px 16px;
+  }
+}
+
+@media (width <= 700px) {
+  .cards.cards7 > ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cards.cards7 > ul > li {
+    padding: 16px 8px;
+  }
+
+  .cards.cards7 .cards-card-body:last-child h3,
+  .cards.cards7 .cards-card-body:last-child h3 a {
+    font-size: 18px;
+  }
+
+  .cards.cards7 .cards-card-body:last-child p:not(.button-container) {
+    font-size: 15px;
+  }
+
+  .cards.cards7 .cards-card-body:last-child p.button-container:nth-last-child(2) > a.button,
+  .cards.cards7 .cards-card-body:last-child p.button-container:last-child > a.button {
+    font-size: 15px;
+    padding: 10px 20px;
   }
 }
 
